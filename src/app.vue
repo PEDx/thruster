@@ -5,15 +5,24 @@
 </template>
 
 <script>
+// import { findQualifiedChildrenFromList } from "./backend/index";
 export default {
-  name: "App"
+  name: "App",
+  mounted() {
+    // const instence = findQualifiedChildrenFromList([this]);
+    // console.log(instence);
+    // console.log(this);
+  }
 };
 </script>
 
 <style lang="scss">
 html,
-body,
-#app {
-  height: 100%;
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

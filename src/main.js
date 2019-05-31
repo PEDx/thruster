@@ -3,18 +3,36 @@ import App from './app';
 import router from './router';
 import './style/cssrest.css';
 import './style/element-style-reload.scss';
-import { Row, Col, Select, Option, Button } from 'element-ui';
+import {
+  Row,
+  Col,
+  Select,
+  Option,
+  InputNumber,
+  Button,
+  Slider,
+  Input,
+  Message,
+  Notification
+} from 'element-ui';
+import store from './store';
 
 Vue.config.productionTip = false;
 Vue.use(Row)
   .use(Col)
-  .use(Option)
+  .use(InputNumber)
+  .use(Slider)
+  .use(Input)
   .use(Button)
-  .use(Select);
+  .use(Select)
+  .use(Option);
+Vue.prototype.$notify = Notification;
+Vue.prototype.$message = Message;
 Vue.prototype.$ELEMENT = { size: 'mini' };
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 });

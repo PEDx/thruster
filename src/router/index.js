@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Editor from '../editor/index';
-import Dashboard from '../pages/dashboard';
+import Editer from '../editer/index';
 
 Vue.use(Router);
 
@@ -10,13 +9,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'dashboard',
-      component: Dashboard
+      redirect: '/editer'
     },
     {
-      path: '/editor',
-      name: 'editor',
-      component: Editor
+      path: '/editer',
+      name: 'editer',
+      component: Editer
     }
   ]
 });
